@@ -18,13 +18,11 @@ variable "irsa_policies" {
 
 variable "app_nops_k8s_collector_api_key" {
   description = "NOPS api key"
-  default     = null
   type        = string
 }
 
 variable "app_nops_k8s_collector_aws_account_number" {
   description = "NOPS collector aws account number"
-  default     = null
   type        = number
 }
 
@@ -35,12 +33,10 @@ variable "app_prometheus_server_endpoint" {
 }
 variable "app_nops_k8s_agent_clusterid" {
   description = "NOPS agent cluster id"
-  default     = ""
   type        = any
 }
 variable "app_nops_k8s_collector_skip_ssl" {
   description = "NOPS collector aws account number"
-  default     = ""
   type        = any
 }
 
