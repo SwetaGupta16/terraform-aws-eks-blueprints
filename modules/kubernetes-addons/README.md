@@ -60,6 +60,7 @@
 | <a name="module_kubernetes_dashboard"></a> [kubernetes\_dashboard](#module\_kubernetes\_dashboard) | ./kubernetes-dashboard | n/a |
 | <a name="module_local_volume_provisioner"></a> [local\_volume\_provisioner](#module\_local\_volume\_provisioner) | ./local-volume-provisioner | n/a |
 | <a name="module_metrics_server"></a> [metrics\_server](#module\_metrics\_server) | ./metrics-server | n/a |
+| <a name="module_nops-k8s-agent"></a> [nops\_k8s\_agent](#module\_nops\_k8s\_agent) | ./nops-k8s-agent | n/a |
 | <a name="module_ondat"></a> [ondat](#module\_ondat) | ondat/ondat-addon/eksblueprints | 0.1.1 |
 | <a name="module_opentelemetry_operator"></a> [opentelemetry\_operator](#module\_opentelemetry\_operator) | ./opentelemetry-operator | n/a |
 | <a name="module_prometheus"></a> [prometheus](#module\_prometheus) | ./prometheus | n/a |
@@ -236,6 +237,14 @@
 | <a name="input_kubernetes_dashboard_helm_config"></a> [kubernetes\_dashboard\_helm\_config](#input\_kubernetes\_dashboard\_helm\_config) | Kubernetes Dashboard Helm Chart config | `any` | `null` | no |
 | <a name="input_local_volume_provisioner_helm_config"></a> [local\_volume\_provisioner\_helm\_config](#input\_local\_volume\_provisioner\_helm\_config) | Local volume provisioner Helm Chart config | `any` | `{}` | no |
 | <a name="input_metrics_server_helm_config"></a> [metrics\_server\_helm\_config](#input\_metrics\_server\_helm\_config) | Metrics Server Helm Chart config | `any` | `{}` | no |
+| <a name="input_nops_helm_config"></a> [nops\_helm\_config](#input\_nops\_helm\_config) | Nops k8s agent Helm Chart config | `any` | `{}` | no |
+| <a name="input_nops_irsa_policies"></a> [nops\_irsa\_policies](#input\_nops\_irsa\_policies) | IAM policy ARNs for nOps IRSA | `list(string)` | `[]` | no |
+| <a name="input_app_nops_k8s_collector_aws_account_number"></a> [app\_nops\_k8s\_collector\_aws\_account\_number](#input\app\_nops\_k8s\_collector\_aws\_account\_number) | AWS account number for nOps| `number` | `{}`| yes |
+| <a name="input_app_nops_k8s_collector_api_key"></a> [app\_nops\_k8s\_collector\_api\_key](#input\app\_nops\_k8s\_collector\_api\_key) | API Key of nOps| `string` | `""` | yes |
+| <a name="input_app_prometheus_server_endpoint"></a> [app\_prometheus\_server\_endpoint](#input\app\_prometheus\_server\_endpoint) | Prometheus server endpoint| `string` | `""` | yes |
+| <a name="input_app_nops_k8s_agent_clusterid"></a> [app\_nops\_k8s\_agent\_clusterid](#input\app\_nops\_k8s\_agent\_clusterid) | NOPS agent cluster id| `any` | `{}` | yes |
+| <a name="input_app_nops_k8s_collector_skip_ssl"></a> [app\_nops\_k8s\_k8s\_collector\_skip\_ssl](#input\app\_nops\_k8s\_collector\_skip\_ssl) | NOPS collector aws account number| `any` | `{}` | yes |
+| <a name="input_app_nops_k8s_agent_prom_token"></a> [app\_nops\_k8s\_k8s\_agent\_prom\_token](#input\app\_nops\_k8s\_agent\_prom\_token) | App nops agent prometheus token| `any` | `{}` | yes |
 | <a name="input_ondat_admin_password"></a> [ondat\_admin\_password](#input\_ondat\_admin\_password) | Password for Ondat admin user | `string` | `"storageos"` | no |
 | <a name="input_ondat_admin_username"></a> [ondat\_admin\_username](#input\_ondat\_admin\_username) | Username for Ondat admin user | `string` | `"storageos"` | no |
 | <a name="input_ondat_create_cluster"></a> [ondat\_create\_cluster](#input\_ondat\_create\_cluster) | Create cluster resources | `bool` | `true` | no |
